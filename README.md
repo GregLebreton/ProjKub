@@ -1,4 +1,5 @@
 # ProjKub
+## Création du cluster couchbase
 cd vagranteansible 
 1- creation des machines vagrant (2 machines centos)
 vagrant up
@@ -8,13 +9,13 @@ vagrant up
 ansible-playbook -i inventory.env -u vagrant install.yml
 ansible-playbook -i inventory.env -u vagrant config.yml 
 
-3- création du jar et dockerisation de l'application
+## création du jar et dockerisation de l'application
 cd ../spring-boot-couchbase-example-master
 mvn package
 docker build -t springcouchbase .
 
 
-Création des composants kubernetes(deployment et service)
+## Création des composants kubernetes(deployment et service)
 
 cd ../manifestesKub
 kubectl apply -f deployment.yaml
