@@ -29,6 +29,6 @@ minikube service frontend
 ```
 ### Accés au service 
 ```
-Pour accéder au données injectées dans la base de donée il acceder à l'onglet /fetchAllCustomers
+Pour visualiser les données injectées dans la base de données il faut accéder à l'onglet /fetchAllCustomers
 l'url doit ressembler à ça "http://192.168.99.100:32142/fetchAllCustomers"
 ```
