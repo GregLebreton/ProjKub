@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-couchbase
+  labels:
+    app: spcouchbase
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: spcouchbase
+  template:
+    metadata:
+      labels:
+        app: spcouchbase
+    spec:
+      containers:
+        - name: couchbase
+          image: ayoubchemingui/springcouchbase
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+      - name: registryhub
