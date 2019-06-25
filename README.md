@@ -1,15 +1,5 @@
 # ProjKub
-## Création du cluster couchbase
-```
-cd vagranteansible 
-1- creation des machines vagrant (2 machines centos)
-vagrant up
-2- partage des clés ssh de l'utilisateur courant avec les 2 machines
-./ssh.sh 
-3- installation et configuration d'un cluster couchbase (master+noeud)
-ansible-playbook -i inventory.env -u vagrant install.yml
-ansible-playbook -i inventory.env -u vagrant config.yml 
-```
+
 ## Dockerisation de l'application
 ```
 cd ../aspnetapp
@@ -29,7 +19,7 @@ kubectl apply -f service.yaml
 ```
 ## Exposition du service et afficher le résultat dans le navigateur par défault
 ```
-minikube service frontend
+// TODO
 ```
 ### Accés au service 
 ```
