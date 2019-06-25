@@ -12,9 +12,9 @@ ansible-playbook -i inventory.env -u vagrant config.yml
 ```
 ## création du jar et dockerisation de l'application
 ```
-cd ../spring-boot-couchbase-example-master
-mvn package
-docker build -t springcouchbase .
+cd ../aspnetapp
+docker build -t aspnetapp .
+docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
 
 ## Création des composants kubernetes(deployment et service)
@@ -29,6 +29,6 @@ minikube service frontend
 ```
 ### Accés au service 
 ```
-Pour visualiser les données injectées dans la base de données il faut accéder à l'onglet /fetchAllCustomers
-l'url doit ressembler à ça "http://192.168.99.100:32142/fetchAllCustomers"
+docker exec aspnetcore_sample ipconfig
+Copy the container IP address and paste into your browser (for example, 172.29.245.43)
 ```
