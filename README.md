@@ -10,11 +10,9 @@ vagrant up
 ansible-playbook -i inventory.env -u vagrant install.yml
 ansible-playbook -i inventory.env -u vagrant config.yml 
 ```
-## création du jar et dockerisation de l'application
+## Dockerisation de l'application
 ```
-cd ../spring-boot-couchbase-example-master
-mvn package
-docker build -t springcouchbase .
+docker build -t phpapp .
 ```
 
 ## Création des composants kubernetes(deployment et service)
