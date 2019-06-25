@@ -1,12 +1,13 @@
 # ProjKub
-
+```
+Dockeriser une application asp.net
+```
 ## Dockerisation de l'application
 ```
 cd ../aspnetapp
 docker build -t aspnetapp .
 docker run -d -p 8080:80 --name myapp aspnetapp
 ```
-
 ## Visualisation de l'application dans le container
 ```
 http://localhost:8080
