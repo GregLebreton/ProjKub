@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: phpapp
-          image: greglebreton/aspnetapp:1.0
+          image: greglebreton/phpapp:1.0
           # resources:
           #   requests:
           #     memory: "250Mi"
