@@ -10,20 +10,24 @@ vagrant up
 ansible-playbook -i inventory.env -u vagrant install.yml
 ansible-playbook -i inventory.env -u vagrant config.yml 
 ```
-## création du jar et dockerisation de l'application
+## Dockerisation de l'application
 ```
 cd ../aspnetapp
 docker build -t aspnetapp .
-docker run -it --rm --name aspnetcore_sample aspnetapp
+docker run -d -p 8080:80 --name myapp aspnetapp
 ```
 
+## Visualisation de l'application dans le container
+```
+http://localhost:8080
+```
 ## Création des composants kubernetes(deployment et service)
 ```
 cd ../manifestesKub
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 ```
-## exposer le service et afficher le résultat dans le navigateur par défault
+## Exposition du service et afficher le résultat dans le navigateur par défault
 ```
 minikube service frontend
 ```
