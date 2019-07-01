@@ -16,7 +16,3 @@ kubectl apply -f service.yaml
 ```
 minikube service frontend
 ```
-### Accés au service 
-```
-
-```
