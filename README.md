@@ -20,10 +20,6 @@ kubectl apply -f service.yaml
 ```
 ## Exposition du service et afficher le résultat dans le navigateur par défault
 ```
-// TODO
-```
-### Accés au service 
-```
-docker exec aspnetcore_sample ipconfig
-Copy the container IP address and paste into your browser (for example, 172.29.245.43)
+kubectl expose deployment myapp --type=NodePort -name=myappservice
+minikube service myappservice
 ```
