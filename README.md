@@ -19,6 +19,6 @@ kubectl apply -f deployment.yaml --> deploy greglebreton/aspnetapp:1.0
 ```
 ## Exposition du service et afficher le résultat dans le navigateur par défault
 ```
-kubectl expose deployment aspnetapp --type=NodePort -name=myappservice
+kubectl expose deployment aspnetapp --type=NodePort --name=myappservice
 minikube service myappservice
 ```
